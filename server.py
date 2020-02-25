@@ -8,6 +8,15 @@ app = Flask(__name__)
 def index(title):
     d = dict()
     d['title'] = title
+    d['prof'] = ''
+    return render_template('base.html', **d)
+
+
+@app.route('/training/<prof>')
+def profession(prof):
+    d = dict()
+    d['title'] = 'Тренировка'
+    d['prof'] = prof
     return render_template('base.html', **d)
 
 

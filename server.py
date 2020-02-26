@@ -17,7 +17,18 @@ def profession(prof):
     d = dict()
     d['title'] = 'Тренировка'
     d['prof'] = prof
-    return render_template('base.html', **d)
+    return render_template('training.html', **d)
+
+
+@app.route('/list_prof/<list>')
+def list_prof(list):
+    d = dict()
+    profs = ['инженер-исследователь', 'пилот', 'экзобиолог', 'строитель', 'врач', 'астрогеолог', 'метеоролог',
+             'штурман']
+    d['profs'] = profs
+    d['list'] = list
+    d['title'] = 'Список профессий'
+    return render_template('prof_list.html', **d)
 
 
 if __name__ == '__main__':

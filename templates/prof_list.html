@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="margin-left: 50px;">
+<h2>Список профессий</h2>
+<{{list}}>
+    {% for item in profs %}
+        <li><h3>{{item}}</h3></li>
+    {% endfor %}
+</{{list}}>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/css/style.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+<form id="form" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <img src="../static/img/MARS.png" style="float: left;">
+    <h1>Аварийный доступ</h1>
+    <div>
+        {{ form.astro_id.label }} <br>
+        {{ form.astro_id(class="form-control") }}<br>
+        {% for error in form.astro_id.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.astro_pswd.label }} <br>
+        {{ form.astro_pswd(class="form-control", type="password") }}<br>
+        {% for error in form.astro_pswd.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.cap_id.label }} <br>
+        {{ form.cap_id(class="form-control") }}<br>
+        {% for error in form.cap_id.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.cap_pswd.label }} <br>
+        {{ form.cap_pswd(class="form-control", type="password") }}<br>
+        {% for error in form.cap_pswd.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </div>
+    <div>{{ form.submit(class="btn btn-primary", type="submit") }}</div>
+</form>
+{% endblock %}

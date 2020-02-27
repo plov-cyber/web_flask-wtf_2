@@ -1,3 +1,8 @@
 h4 {
     color: blue;
 }
+#form {
+    margin: auto;
+    max-width: 700px;
+    padding: 10px;
+}

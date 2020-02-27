@@ -31,5 +31,20 @@ def list_prof(list):
     return render_template('prof_list.html', **d)
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    d = dict()
+    d['title'] = 'Анкета'
+    d['surname'] = 'Watny'
+    d['name'] = 'Mark'
+    d['education'] = 'выше среднего'
+    d['profession'] = 'штурман марсохода'
+    d['sex'] = 'male'
+    d['motivation'] = 'Всегда мечтал застрять на Марсе!'
+    d['ready'] = 'True'
+    return render_template('auto_answer.html', **d)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

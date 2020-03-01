@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template
 from loginform import LoginForm
 
 app = Flask(__name__)
@@ -58,6 +58,14 @@ def distribute():
     d['title'] = 'Размещение'
     d['team'] = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур', 'Тедди Сандерс', 'Шон Бин']
     return render_template('distribution.html', **d)
+
+
+@app.route('/table/<sex>/<int:age>')
+def table(sex, age):
+    d['title'] = 'Цвет каюты'
+    d['sex'] = sex
+    d['age'] = age
+    return render_template('table.html', **d)
 
 
 if __name__ == '__main__':

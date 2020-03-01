@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+    .wall {
+        width: 450px;
+        height: 500px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center; max-width: 900px; margin: auto;">
+    <h2>Оформление каюты</h2>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Оформление каюты</th>
+            <th scope="col">Эмблема</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% if sex == 'female' %}
+                    {% if age < 21 %}
+                        <td style="background-color: pink;" class="wall"></td>
+                        <td><img src="/static/img/smfemale.jpg" width="450" height="500"></td>
+                    {% else %}
+                        <td style="background-color: red;" class="wall"></td>
+                        <td><img src="/static/img/bigfemale.jpg" width="450" height="500"></td>
+                    {% endif %}
+                {% elif sex == 'male' %}
+                    {% if age < 21 %}
+                        <td style="background-color: blue;" class="wall"></td>
+                        <td><img src="/static/img/smmale.jpg" width="450" height="500"></td>
+                    {% else %}
+                        <td style="background-color: black;" class="wall"></td>
+                        <td><img src="/static/img/bigmale.jpg" width="450" height="500"></td>
+                    {% endif %}
+                {% endif %}
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

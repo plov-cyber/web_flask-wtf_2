@@ -6,3 +6,10 @@ h4 {
     max-width: 700px;
     padding: 10px;
 }
+#my_form {
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 10px;
+}

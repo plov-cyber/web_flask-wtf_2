@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, render_template, request
 from loginform import LoginForm
 from PIL import Image
@@ -90,6 +92,13 @@ def galery():
         d['imgs'].append(f'tmp{cnt}.png')
         cnt += 1
         return render_template('galery.html', **d)
+
+
+@app.route('/member')
+def show():
+    with open('templates/members.json', 'rt', encoding='utf-8') as f:
+        members = json.loads(f.read())
+    return render_template('member.html', title='Личная карточка', members=members)
 
 
 if __name__ == '__main__':

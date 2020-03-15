@@ -1,0 +1,40 @@
+{
+  "members": [
+    {
+      "name": "Энди",
+      "surname": "Уир",
+      "image": "/static/img/photo1.jpg",
+      "specs": [
+        "астрогеолог",
+        "специалист по радиационной защите"
+      ]
+    },
+    {
+      "name": "Барни",
+      "surname": "Стинсон",
+      "image": "/static/img/photo2.jpg",
+      "specs": [
+        "космонавт",
+        "пилот"
+      ]
+    },
+    {
+      "name": "Тед",
+      "surname": "Мосби",
+      "image": "/static/img/photo3.jpg",
+      "specs": [
+        "инженер",
+        "архитектор"
+      ]
+    },
+    {
+      "name": "Маршалл",
+      "surname": "Эриксон",
+      "image": "/static/img/photo4.jpg",
+      "specs": [
+        "адвокат",
+        "биолог"
+      ]
+    }
+  ]
+}

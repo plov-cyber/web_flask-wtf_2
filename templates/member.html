@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="text-align: center">
+    {% set item = members['members']|random %}
+    <h3>{{item['name']}} {{item['surname']}}</h3>
+    <br>
+    <img src="{{item['image']}}">
+    <br>
+    <h5>{{item['specs']|join(', ')}}</h5>
+</div>
+{% endblock %}
